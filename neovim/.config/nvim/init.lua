@@ -1,0 +1,5 @@
+require('lnoxsian-plugins.plugins')
+require('lnoxsian-plugins.plugset')
+require('lnoxsian-settings.genset')
+require('lnoxsian-settings.keyset')
+require('lnoxsian-settings.neovide')
