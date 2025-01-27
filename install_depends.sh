@@ -24,6 +24,18 @@ copy_config_neovim() {
     esac
 }
 
+copy_config_terminator() {
+    read -r -p "Are you sure? [y/N] " response
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            cp -r neovim/.config/terminator ~/.config/
+            ;;
+        *)
+            echo 'not doing anything :)'
+            ;;
+    esac
+}
+
 copy_config_tmux() {
     read -r -p "Are you sure? [y/N] " response
     case "$response" in
@@ -36,7 +48,7 @@ copy_config_tmux() {
     esac
 }
 
-copy_config_terminator() {
+copy_config_fish() {
     read -r -p "Are you sure? [y/N] " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
@@ -47,3 +59,13 @@ copy_config_terminator() {
             ;;
     esac
 }
+
+install_apps
+
+copy_config_neovim
+
+copy_config_terminator
+
+copy_config_tmux
+
+copy_config_fish
