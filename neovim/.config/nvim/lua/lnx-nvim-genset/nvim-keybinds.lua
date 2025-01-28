@@ -49,3 +49,16 @@ map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 map('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 map('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 map('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- NvimTree for neovim
+map('n', '<leader>n', ":NvimTreeToggle<CR>")
+map('n', '<leader>f', ":NvimTreeFocus<CR>")
+
+-- Toggle terminal config
+map('n', '<leader>tt', ":ToggleTerm<CR>")
+
+-- Clear search for neovim
+map('n', '<leader>cs', ":noh<CR>")
+
+-- Colorizer toggle for neovim
+map('n', '<leader>c', ":ColorizerToggle<CR>")
