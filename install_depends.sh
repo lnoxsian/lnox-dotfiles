@@ -1,3 +1,4 @@
+# install some apps
 install_apps() {
     echo 'installing some apps:: tmux, git, build-essential, curl, cmake, python3, python3-[pip,dev,setuptools]'
     sudo apt install tmux git build-essential cmake python3 python3-pip python3-venv python3-dev python3-setuptools curl -y
