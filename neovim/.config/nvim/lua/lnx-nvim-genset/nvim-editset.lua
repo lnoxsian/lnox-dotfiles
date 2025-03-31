@@ -8,6 +8,7 @@ local cmd = vim.cmd
 o.termguicolors = true
 -- o.background = 'dark'
 cmd.colorscheme("gruvbox")
+g.mapleader = " "
 
 -- Do not save when switching buffers
 -- o.hidden = true
