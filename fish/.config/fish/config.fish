@@ -74,3 +74,6 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for 
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
+
+### SETTING THE STARSHIP PROMPT FOR FZF ###
+fzf --fish | source
