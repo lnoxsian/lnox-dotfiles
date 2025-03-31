@@ -41,7 +41,7 @@ copy_config_tmux() {
     read -r -p "Are you sure? [y/N] " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
-            cp -r fish/.config/fish ~/.config/
+            cp -r fish/.config/tmux ~/.config/
             ;;
         *)
             echo 'not doing anything :)'
