@@ -18,6 +18,7 @@ alias emacs="emacsclient -c -a 'emacs'"
 alias cls='clear'
 alias nv.='nvim .'
 alias x='exit'
+alias cat='bat -p'
 alias del='rm -rf'
 alias htop='btop'
 alias tmux='tmux -u'
