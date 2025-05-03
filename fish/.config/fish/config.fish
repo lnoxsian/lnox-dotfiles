@@ -26,11 +26,11 @@ alias find='fd'
 alias grep='rg' # colorize output (good for log files)
 
 # Changing "ls" to "eza"
-alias ls='lsd --color=always --group-directories-first' # my preferred listing
-alias la='lsd -a --color=always --group-directories-first'  # all files and dirs
-alias ll='lsd -l --color=always --group-directories-first'  # long format
-alias lla='lsd -al --color=always --group-directories-first'  # long format
-alias lt='lsd --tree --color=always --group-directories-first' # tree listing
+alias ls='eza --icons=always --color=always --group-directories-last ' # my preferred listing
+alias la='eza -a --icons=always --color=always --group-directories-last'  # all files and dirs
+alias ll='eza -l --icons=always --color=always --group-directories-last'  # long format
+alias lla='eza -al --icons=always --color=always --group-directories-last'  # long format
+alias lt='eza --tree --icons=always --color=always --group-directories-last' # tree listing
 
 # adding flags
 alias df='df -h'               # human-readable sizes
