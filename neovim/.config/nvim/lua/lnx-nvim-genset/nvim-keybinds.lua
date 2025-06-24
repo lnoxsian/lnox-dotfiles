@@ -62,3 +62,6 @@ map('n', '<leader>cs', ":noh<CR>")
 
 -- Colorizer toggle for neovim
 map('n', '<leader>c', ":ColorizerToggle<CR>")
+
+-- Lazygit caller keybind
+map('n', '<leader>g', ":LazyGit<CR>")
