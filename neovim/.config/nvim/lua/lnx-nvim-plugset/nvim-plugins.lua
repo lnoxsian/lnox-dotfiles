@@ -29,6 +29,7 @@ require("lazy").setup({
         'HiPhish/rainbow-delimiters.nvim', 
         'nosduco/remote-sshfs.nvim',
         'kdheepak/lazygit.nvim',
+        'github/copilot.vim',
     },
 
     -- apps with depends
