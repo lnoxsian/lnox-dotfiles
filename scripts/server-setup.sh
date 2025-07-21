@@ -13,11 +13,13 @@ curl -fsSL https://get.docker.com | bash
 sudo usermod -aG docker $USER
 echo 'setting up tailscale'
 curl -fsSL https://tailscale.com/install.sh | sh
+echo 'run sudo tailscale up and login for tailscale to work'
 echo 'setting up distrobox for running some test'
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 read -p "Do you want to reboot? (yes/no): " answer
 if [[ "$answer" == "yes" ]]; then
     echo "rebooting system."
+    sudo reboot
 else
     echo "reboot your own system dummy."
 fi
