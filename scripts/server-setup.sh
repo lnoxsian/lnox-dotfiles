@@ -4,7 +4,7 @@ read -p "Do you want to run an update? (yes/no): " answer
 if [[ "$answer" == "yes" ]]; then
     echo "running update, upgrade and clean up please do reboot after the script finishes"
     sudo apt update -y && sudo apt upgrade -y && sudo apt-get autoremove --purge && sudo apt-get autoclean
-    sudo apt install curl tmux avahi-daemon git -y
+    sudo apt install curl tmux avahi-daemon git openssh-server -y
     sudo systemctl enable avahi-daemon --now
 else
     echo "run the below command for update upgrade and clean up"
