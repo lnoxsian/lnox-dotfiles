@@ -1,10 +1,10 @@
 /**
  * App Window
  */
-@define-color bg_color #383838;
+@define-color bg_color #222326;
 @define-color window_bg @bg_color;
-@define-color window_border_color #2F2F2F;
-@define-color prefs_backgroud #383838;
+@define-color window_border_color #4D3C68;
+@define-color prefs_backgroud #222326;
 
 /**
  * Input
@@ -19,12 +19,12 @@
  */
 @define-color item_name #FFFFFF;
 @define-color item_text #999;
-@define-color item_box_selected #A27bE5;
-@define-color item_text_selected #383838;
+@define-color item_box_selected #313137;
+@define-color item_text_selected #999;
 @define-color item_name_selected #FFFFFF;
 @define-color item_shortcut_color #777;
 @define-color item_shortcut_shadow darker(@bg_color);
-@define-color item_shortcut_color_sel #2E3436;
+@define-color item_shortcut_color_sel #999;
 @define-color item_shortcut_shadow_sel darker(@item_box_selected);
 
 .app {
