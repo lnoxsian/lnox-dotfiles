@@ -1,8 +1,8 @@
--- config for plugins and other settings
-require("lnx-nvim-plugset.nvim-plugins")
-require("lnx-nvim-plugset.nvim-plugset")
+-- this is the configs for my editor 
+require('lnoxsian.edit_set.autocmd')
+require('lnoxsian.edit_set.settings')
+require('lnoxsian.edit_set.neovide')
+require('lnoxsian.edit_set.keybinds')
 
--- config for editing and other keybinds
-require("lnx-nvim-genset.nvim-editset")
-require("lnx-nvim-genset.nvim-keybinds")
-require("lnx-nvim-genset.nvim-neovset")
+-- this is the config for my plugins and stuff
+require('lnoxsian.plug_set.pluginit')
