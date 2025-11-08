@@ -1,13 +1,44 @@
-[38;5;245m[39m[38;5;4m[1m.[0m
-[38;5;245m├── [39m[38;5;4m[1m.config[0m
-[38;5;245m│   └── [39m[38;5;4m[1mnvim[0m
-[38;5;245m│       ├── [39m[38;5;4m[1mlua[0m
-[38;5;245m│       │   ├── [39m[38;5;4m[1mlnx-nvim-genset[0m
-[38;5;245m│       │   │   ├── [39mnvim-editset.lua
-[38;5;245m│       │   │   ├── [39mnvim-keybinds.lua
-[38;5;245m│       │   │   └── [39mnvim-neovset.lua
-[38;5;245m│       │   └── [39m[38;5;4m[1mlnx-nvim-plugset[0m
-[38;5;245m│       │       ├── [39mnvim-plugins.lua
-[38;5;245m│       │       └── [39mnvim-plugset.lua
-[38;5;245m│       └── [39minit.lua
-[38;5;245m└── [39mneovim-file-tree.txt
+.
+├── .config
+│   └── nvim
+│       ├── init.lua
+│       ├── lazy-lock.json
+│       └── lua
+│           ├── lnoxsian
+│           │   ├── edit_set
+│           │   │   ├── autocmd.lua
+│           │   │   ├── keybinds.lua
+│           │   │   ├── neovide.lua
+│           │   │   └── settings.lua
+│           │   └── plug_set
+│           │       ├── lsp
+│           │       │   ├── lsp.lua
+│           │       │   └── mason.lua
+│           │       ├── pluginit.lua
+│           │       └── plugins
+│           │           ├── auto-session.lua
+│           │           ├── autopairs.lua
+│           │           ├── bufferline.lua
+│           │           ├── colorscheme.lua
+│           │           ├── comment.lua
+│           │           ├── github-copilot.lua
+│           │           ├── indent-blankline.lua
+│           │           ├── init.lua
+│           │           ├── lazygit.lua
+│           │           ├── lualine.lua
+│           │           ├── nvim-cmp.lua
+│           │           ├── nvim-tree.lua
+│           │           ├── remote-sshfs.lua
+│           │           ├── surround.lua
+│           │           ├── telescope.lua
+│           │           ├── toggle-term.lua
+│           │           ├── treesitter.lua
+│           │           └── undeotree.lua
+│           ├── lnx-nvim-genset
+│           │   ├── nvim-editset.lua
+│           │   ├── nvim-keybinds.lua
+│           │   └── nvim-neovset.lua
+│           └── lnx-nvim-plugset
+│               ├── nvim-plugins.lua
+│               └── nvim-plugset.lua
+└── meovim-file-tree.txt
