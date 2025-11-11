@@ -1,31 +1,56 @@
 return {
-  "jiaoshijie/undotree",
+  "XXiaoA/atone.nvim",
+  cmd = "Atone",
+  opts = {}, -- your configuration here
   config = function ()
-    local undotree = require("undotree")
-    local keymap = vim.keymap
-    undotree.setup({
-      float_diff = true,  -- using float window previews diff, set this `true` will disable layout option
-      layout = "left_bottom", -- "left_bottom", "left_left_bottom"
-      position = "left", -- "right", "bottom"
-      ignore_filetype = {
-        'undotree',
-        'undotreeDiff',
-        'qf',
+    local atone = require("atone")
+    atone.setup({
+      layout = {
+        ---@type "left"|"right"
+        direction = "left",
+        ---@type "adaptive"|integer|number
+        --- adaptive: exact the width of tree graph
+        --- if number given is a float less than 1, the width is set to `vim.o.columns * that number`
+        width = 0.25,
       },
-      window = {
-        winblend = 20,
+      -- diff for the node under cursor
+      -- shown under the tree graph
+      diff_cur_node = {
+        enabled = true,
+        ---@type number float less than 1
+        --- The diff window's height is set to a specified percentage of the original (namely tree graph) window's height.
+        split_percent = 0.3,
+      },
+      -- automatically update the buffer that the tree is attached to
+      -- only works for buffer whose buftype is <empty>
+      auto_attach = {
+        enabled = true,
+        excluded_ft = { "oil" },
       },
       keymaps = {
-        j = "move_next",
-        k = "move_prev",
-        gj = "move2parent",
-        J = "move_change_next",
-        K = "move_change_prev",
-        ['<cr>'] = "action_enter",
-        p = "enter_diffbuf",
-        q = "quit",
+        tree = {
+          quit = { "<C-c>", "q" },
+          next_node = "j", -- support v:count
+          pre_node = "k", -- support v:count
+          undo_to = "<CR>",
+          help = { "?", "g?" },
+        },
+        auto_diff = {
+          quit = { "<C-c>", "q" },
+          help = { "?", "g?" },
+        },
+        help = {
+          quit_help = { "<C-c>", "q" },
+        },
+      },
+      ui = {
+        -- refer to `:h 'winborder'`
+        border = "single",
+        -- compact graph style
+        compact = false,
       },
     })
-    keymap.set('n', '<leader>u', undotree.toggle, { noremap = true, silent = true })
+    local keymap = vim.keymap
+    keymap.set("n", "<leader>u", "<cmd>Atone toggle<cr>", { desc = "Fuzzy find files in cwd" })
   end,
 }

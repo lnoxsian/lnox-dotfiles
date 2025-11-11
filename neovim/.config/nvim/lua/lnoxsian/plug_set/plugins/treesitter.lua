@@ -29,12 +29,12 @@ return {
         "vim",
         "dockerfile",
         "gitignore",
-        "query",
         "vimdoc",
         "c",
         "python",
         "rust",
         "zig",
+        "go",
       },
       incremental_selection = {
         enable = true,
