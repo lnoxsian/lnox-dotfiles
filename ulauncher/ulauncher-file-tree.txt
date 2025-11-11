@@ -1,0 +1,15 @@
+.
+├── .config
+│   └── ulauncher
+│       ├── extensions.json
+│       ├── settings.json
+│       ├── shortcuts.json
+│       └── user-themes
+│           └── ulauncher-mint-y-dark-theme
+│               ├── generated.css
+│               ├── LICENSE
+│               ├── manifest.json
+│               ├── theme-gtk-3.20.css
+│               ├── theme.css
+│               └── theme.css.bak
+└── ulauncher-file-tree.txt

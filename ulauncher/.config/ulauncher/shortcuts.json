@@ -29,14 +29,4 @@
         "run_without_argument": false,
         "added": 1760890271.769612
     },
-    "5cbc9982-8033-4187-b076-97dcad4a325b": {
-        "id": "5cbc9982-8033-4187-b076-97dcad4a325b",
-        "name": "duckduckgo",
-        "keyword": "d",
-        "cmd": "https://duckduckgo.com/?origin=funnel_home_searchresults&t=h_&q=%s+&ia=web",
-        "icon": "~/Downloads/The_DuckDuckGo_Duck.png",
-        "is_default_search": false,
-        "run_without_argument": false,
-        "added": 1760891714.6780374
-    }
 }
