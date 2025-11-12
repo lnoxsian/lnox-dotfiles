@@ -2,7 +2,6 @@
 ├── .config
 │   └── nvim
 │       ├── init.lua
-│       ├── lazy-lock.json
 │       └── lua
 │           ├── lnoxsian
 │           │   ├── edit_set
@@ -21,6 +20,7 @@
 │           │           ├── bufferline.lua
 │           │           ├── colorscheme.lua
 │           │           ├── comment.lua
+│           │           ├── cusorword.lua
 │           │           ├── github-copilot.lua
 │           │           ├── indent-blankline.lua
 │           │           ├── init.lua
@@ -28,6 +28,7 @@
 │           │           ├── lualine.lua
 │           │           ├── nvim-cmp.lua
 │           │           ├── nvim-tree.lua
+│           │           ├── rainbow-delimiter.lua
 │           │           ├── remote-sshfs.lua
 │           │           ├── surround.lua
 │           │           ├── telescope.lua
@@ -41,4 +42,4 @@
 │           └── lnx-nvim-plugset
 │               ├── nvim-plugins.lua
 │               └── nvim-plugset.lua
-└── meovim-file-tree.txt
+└── neovim-file-tree.txt

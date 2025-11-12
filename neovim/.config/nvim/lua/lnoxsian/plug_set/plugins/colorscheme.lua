@@ -1,10 +1,12 @@
 return {
-  "ellisonleao/gruvbox.nvim",
-  priority = 1000,
-  config = function()
-    local theme = require("gruvbox")
-    local cmd = vim.cmd
 
+  "ellisonleao/gruvbox.nvim",
+
+  priority = 1000,
+
+  config = function()
+    theme_opt = "gruvbox"
+    local theme = require("gruvbox")
     theme.setup({
       terminal_colors = true, -- add neovim terminal colors
       undercurl = true,
@@ -28,6 +30,6 @@ return {
       dim_inactive = false,
       transparent_mode = false,
     })
-    cmd("colorscheme gruvbox")
+    vim.cmd("colorscheme gruvbox")
   end,
 }
