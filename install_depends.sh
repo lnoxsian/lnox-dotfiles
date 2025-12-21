@@ -5,6 +5,13 @@ install_apps() {
     echo 'done installing apps'
 }
 
+install_and_setup_ppa_apps() {
+    sudo add-apt-repository ppa:gnome-terminator/ppa -y && sudo apt update -y
+    sudo add-apt-repository ppa:fish-shell/release-4 -y && sudo apt update -y
+    sudo add-apt-repository ppa:agornostal/ulauncher -y && sudo apt update -y
+    sudo apt install ulauncher terminator fish -y
+}
+
 install_tpm() {
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
@@ -14,54 +21,72 @@ install_fisher() {
 }
 
 copy_config_neovim() {
-    read -r -p "Are you sure? [y/N] " response
+    read -r -p "Copy the neovim config .config/nvim ? [y/N] " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
             cp -r neovim/.config/nvim ~/.config/
             ;;
         *)
-            echo 'not doing anything :)'
+            echo 'skipping the copy procedure'
             ;;
     esac
 }
 
 copy_config_terminator() {
-    read -r -p "Are you sure? [y/N] " response
+    read -r -p "Copy the terminator config .config/terminator ? [y/N] " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
-            cp -r neovim/.config/terminator ~/.config/
+            cp -r terminator/.config/terminator ~/.config/
             ;;
         *)
-            echo 'not doing anything :)'
+            echo 'skipping the copy procedure'
             ;;
     esac
 }
 
 copy_config_tmux() {
-    read -r -p "Are you sure? [y/N] " response
+    read -r -p "Copy the tmux config .config/tmux ? [y/N] " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
-            cp -r fish/.config/tmux ~/.config/
+            cp -r tmux/.config/tmux ~/.config/
             ;;
         *)
-            echo 'not doing anything :)'
+            echo 'skipping the copy procedure'
             ;;
     esac
 }
 
 copy_config_fish() {
-    read -r -p "Are you sure? [y/N] " response
+    read -r -p "Copy the fish config .config/fish ? [y/N] " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
             cp -r fish/.config/fish ~/.config/
             ;;
         *)
-            echo 'not doing anything :)'
+            echo 'skipping the copy procedure'
+            ;;
+    esac
+}
+
+copy_config_ulauncher() {
+    read -r -p "Copy the ulauncher config .config/ulauncher ? [y/N] " response
+    case "$response" in
+        [yY][eE][sS]|[yY]) 
+            cp -r ulauncher/.config/ulauncher ~/.config/
+            ;;
+        *)
+            echo 'skipping the copy procedure'
             ;;
     esac
 }
 
 install_apps
+
+install_and_setup_ppa_apps
+
+install_tpm
+
+install_fisher
 
 copy_config_neovim
 
@@ -70,3 +95,5 @@ copy_config_terminator
 copy_config_tmux
 
 copy_config_fish
+
+copy_config_ulauncher
