@@ -12,3 +12,5 @@ git clone https://github.com/lnoxsian/lnox-dotfiles
 	- for my terminator config its got gruvbox theme and some of my settings
 - **fish**
 	 - for my fish config its got my fav fish alias as well as my addition apps
+- **ulauncher**
+	 - for my ulauncher config its got my fav config theme
