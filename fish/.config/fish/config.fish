@@ -74,7 +74,16 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for 
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for change to take effect.'"
 
 ### SETTING THE STARSHIP PROMPT ###
-starship init fish | source
+if command -q starship
+    starship init fish | source
+end
 
 ### SETTING THE STARSHIP PROMPT FOR FZF ###
-fzf --fish | source
+if command -q fzf
+    fzf --fish | source
+end
+
+### JAVM INIT ###
+if command -q javm
+    javm init fish | source
+end
