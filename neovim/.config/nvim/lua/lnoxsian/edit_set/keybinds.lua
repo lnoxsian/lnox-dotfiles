@@ -63,4 +63,4 @@ map("n", "<C-w><up>", "<C-w>+")
 map("n", "<C-w><down>", "<C-w>-")
 
 -- Colorizer Toggle
-map('n', '<leader>cc', ':ColorizerToggle<Return>')
+map('n', '<leader>cc', ':HighlightColors Toggle<Return>')
