@@ -64,3 +64,9 @@ map("n", "<C-w><down>", "<C-w>-")
 
 -- Colorizer Toggle
 map('n', '<leader>cc', ':HighlightColors Toggle<Return>')
+
+-- Remove select highlight
+map('n', '<leader>c', '<CMD>noh<Return>')
+
+-- Toggle NvimTree
+map('n', '<leader>n', '<CMD>NvimTreeToggle<Return>')
